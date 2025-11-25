@@ -122,14 +122,13 @@ ul li a:hover{
    font-weight: 600;
 }
 
-/* correction couleur */
+
 .description{
    line-height: 1.5rem;
    color: var(--text-light);
    margin-bottom: 2rem;
 }
 
-/* correction du nom */
 .action_btns{
    display: flex;
    gap: 1rem;
