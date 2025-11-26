@@ -157,6 +157,7 @@ ul li a:hover{
 
 .hire__me :hover{
    background-color: var(--primary-color-dark);
+
 }
 .portfolio {
    color: var(--primary-color);
@@ -339,4 +340,78 @@ ul li a:hover{
   .tags span {
     margin-bottom: 8px;
   }
+}
+.Contact {
+  width: 100%;                 
+  max-width: var(--max-width); 
+  margin: auto;
+  padding: 6rem 1rem;
+  background-color: var(--extra-light);  
+  min-height: 100vh;          
+  display: block;
+}
+.contact-title{
+   font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+.contact-subtitle{
+   font-size: 1rem;
+   color: var(--text-dark);
+   margin-bottom: 40px;
+}
+.contact-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 50px;
+}
+.contact-info{
+   width: var(--max-width);
+   text-align: left;
+}
+.contact-info p {
+   font-size: 1rem;
+   color: var(--text-dark);
+   margin: 12px 0;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.contact-info i {
+   color: var(--primary-color);
+   font-size: 1.2rem;
+}
+.contact-form{
+  width: var(--max-width);
+  width: 100%;
+}
+.contact-form input,
+.contact-form textarea{
+   width: 100%;
+   padding: 14px;
+   margin-bottom: 15px;
+   border: 1px solid #DAD5DB;
+   border-radius: 10px;
+   font-size: 1rem;
+}
+.contact-form textarea {
+   height: 130px;
+   resize: none;
+}
+.contact-form button {
+   width: 100%;
+   padding: 14px;
+   background-color: var(--primary-color);
+   color: white;
+   font-size: 1rem;
+   font-weight: 600;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.contact-form button:hover{
+   background-color: var(--primary-color-dark);
 }
