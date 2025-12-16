@@ -71,7 +71,7 @@ ul {
 }
 
 ul li a {
-   padding: 0.5rem 1rem;
+   padding: 0.5rem 2rem;
    border: 2px solid transparent;
    font-weight: 600;
    color: var(--text-dark);
@@ -358,21 +358,21 @@ ul li a:hover{
   min-height: 100vh;          
   display: block;
 }
-.contact-title{
-   font-size: 2.5rem;
+.contact-title {
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 2rem;
 }
 .contact-subtitle{
    font-size: 1rem;
-   color: var(--text-dark);
-   margin-bottom: 40px;
-}
+   color: var(--text-light);
+   margin-bottom: 40px;}
 .contact-container{
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-between;
+   align-items: center;
    gap: 50px;
 }
 .contact-info{
@@ -392,18 +392,23 @@ ul li a:hover{
    font-size: 1.2rem;
 }
 .contact-form{
-  width: var(--max-width);
-  width: 100%;
+  flex: 1;
+ 
+  width: 50%;
 }
 .contact-form input,
 .contact-form textarea{
-   width: 100%;
+   width: 65%;
    padding: 14px;
    margin-bottom: 15px;
    border: 1px solid #DAD5DB;
    border-radius: 10px;
    font-size: 1rem;
 }
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;}
 .contact-form textarea {
    height: 130px;
    resize: none;
@@ -423,6 +428,17 @@ ul li a:hover{
 .contact-form button:hover{
    background-color: var(--primary-color-dark);
 }
+.contact-lottie {
+  width: 48%; /* Lottie prend 48% de la largeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-lottie lottie-player {
+  width: 100%; /* remplit la largeur de son container */
+  height: auto; /* garde les proportions */
+}
 @keyframes mymove {
   from {left: -100px}
   to   {left: 0px;}
@@ -431,3 +447,142 @@ ul li a:hover{
   from {right: -100px}
   to   {right: 0px;}
 }
+
+.projects {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 6rem 1rem;
+  background-color: var(--extra-light);
+  min-height: 100vh;
+}
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.project-subtitle{
+   font-size: 1rem;
+   color: var(--text-light);
+   margin-bottom: 40px;
+}
+.projects-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: var(--text-light);
+  line-height: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-card h4 {
+  margin: 1rem 0 0.5rem;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+
+.project-card ul {
+  margin-left: 1rem;
+  color: var(--text-dark);
+}
+
+.project-card ul li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: var(--primary-color-dark);
+  text-decoration: underline;
+}
+
+
+@media (max-width: 750px) {
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.language-switcher {
+  display: flex;
+  gap: 2%;
+  width: 7%;
+ 
+  justify-content: space-between;
+}
+.language-switcher button {
+   width: 100%; 
+   padding: 2% 0; 
+    border: 0.3% solid var(--primary-color);
+  border-radius: 10%;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 80%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.language-switcher button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.language-switcher button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color-dark);
+}
+
+@media (max-width: 750px) {
+  .language-switcher {
+    width: 30%; }
+   .language-switcher button {
+    font-size: 70%;
+    padding: 2% 0;
+  }
+} 
