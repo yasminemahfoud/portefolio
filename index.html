@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Style.css" />
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -15,19 +17,27 @@
 <body>
   <nav>
     <div class="nav__content">
-      <div class="logo"><a href="">Yasmine Mahfoud</a></div>
+      <div class="logo"><a href="#acceuil">Yasmine Mahfoud</a></div>
       <label for="check" class="checkbox">
+
+
         <i class="ri-menu-line"></i>
       </label>
+
       <ul>
-        <li><a href="#acceuil">Accueil</a></li>
+        <li><a href="#accueil">Accueil</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="language-switcher">
+        <button onclick="setLanguage('fr')">FR</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
     </div>
+
   </nav>
-  <section id="acceuil" class="section">
+  <section id="accueil" class="section">
     <div class="section__container">
       <div class="content">
         <h1 class="title">
@@ -115,19 +125,76 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="Contact">
-    <h2 class="contact-title">Contactez-moi</h2>
-    <p class="contact-subtitle">Je suis a votre ecoute, Contactez-moi ici</p>
-    <div class="Contact-container">
+  <section id="projets" class="projects">
+    <h2 class="project-title">Mes Projets</h2>
+    <p class="project-subtitle">
+      Voici une sélection de mes réalisations les plus importantes.
+    </p>
 
-      <form class="contact-form" action="https://formspree.io/f/mangwegy" method="post">
-        <input type="text" name="name" placeholder="Votre Nom Complet" required>
-        <input type="email" name="email" placeholder="Votre Adresse Email" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Application de Gestion de Recettes avec Reconnaissance d’Images</h3>
+        <p>
+          Une application permettant de gérer des recettes, reconnaître des ingrédients via image
+          avec TensorFlow.js, et offrir une interface moderne réalisée en React.
+        </p>
+
+        <h4>Environnement :</h4>
+        <ul>
+          <li>React.js</li>
+          <li>Node.js / Express</li>
+          <li>PostgreSQL</li>
+          <li>TensorFlow.js</li>
+        </ul>
+
+        <a href="https://drive.google.com/drive/folders/1dySbVzP_qB81O0xji1SdjmKrSmt_kV3v?usp=drive_link"
+          target="_blank" class="project-link">Voir les captures</a>
+      </div>
+      <div class="project-card">
+
+        <h3>Système de Rappel Automatique des Échéances Clients</h3>
+        <p>
+          Mise en place d'un système qui envoie automatiquement des e-mails aux
+          clients pour rappeler leurs échéances.
+        </p>
+
+        <h4>Environnement :</h4>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js </li>
+          <li>PostgreSQL</li>
+          <li>Nodemailer</li>
+          <li>API GPT</li>
+        </ul>
+
+        <a href="https://drive.google.com/drive/folders/1jUywF0KGw3hqPBN1pLsi7NSW0SwZpVfV?usp=drive_link"
+          target="_blank" class="project-link">Voir les captures</a>
+      </div>
+
     </div>
   </section>
+ <section id="contact" class="Contact">
+  <h2 class="contact-title">Contactez-moi</h2>
+  <p class="contact-subtitle">Je suis à votre écoute, contactez-moi ici</p>
+  <div class="contact-container">
+    <!-- Formulaire à gauche -->
+    <form class="contact-form" action="https://formspree.io/f/mangwegy" method="post">
+      <input type="text" name="name" placeholder="Votre Nom Complet" required>
+      <input type="email" name="email" placeholder="Votre Adresse Email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <!-- Lottie à droite -->
+    <div class="contact-lottie">
+      <lottie-player src="contact.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay>
+      </lottie-player>
+    </div>
+  </div>
+</section>
+
+
 
 </body>
 
