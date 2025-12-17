@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Style.css" />
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -177,23 +175,41 @@
   <h2 class="contact-title">Contactez-moi</h2>
   <p class="contact-subtitle">Je suis à votre écoute, contactez-moi ici</p>
   <div class="contact-container">
-    <!-- Formulaire à gauche -->
-    <form class="contact-form" action="https://formspree.io/f/mangwegy" method="post">
+  
+    <form  id="contactForm" class="contact-form"  >
       <input type="text" name="name" placeholder="Votre Nom Complet" required>
       <input type="email" name="email" placeholder="Votre Adresse Email" required>
       <textarea name="message" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
+      <button type="submit" id="submitBtn">Envoyer</button>
+      <p id="loadingText" style="display:none;">Envoi en cours ...</p>
     </form>
-
-    <!-- Lottie à droite -->
-    <div class="contact-lottie">
-      <lottie-player src="contact.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay>
+     <div id="successBox" style="display:none; text-align:center;">
+      <h3>Votre message a été envoyé avec succès !</h3>
+      <lottie-player 
+        src="done.json"
+        background="transparent"
+        speed="1"
+        style="width:300px;height:300px;"
+        autoplay>
       </lottie-player>
     </div>
+
+    
+    <div class="contact-lottie">
+      <lottie-player 
+        src="contact.json"
+        background="transparent"
+        speed="1"
+        style="width:400px;height:400px;"
+        loop autoplay>
+      </lottie-player>
+    </div>
+
   </div>
 </section>
 
-
+ <script src="script.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </body>
 
