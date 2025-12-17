@@ -1,4 +1,5 @@
-const translations = {
+ //la partie de multilangue
+ const translations = {
   fr: {
     accueil: "Accueil",
     apropos: "À propos",
@@ -128,3 +129,50 @@ function setLanguage(lang) {
   localStorage.setItem('lang',lang);
   updateTexts(lang);
 }
+//la partie lotties
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("submitBtn");
+  const loading = document.getElementById("loadingText");
+  const successBox = document.getElementById("successBox");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    btn.style.display = "none";
+    loading.style.display = "block";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mangwegy", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        loading.style.display = "none";
+        form.style.display = "none";
+        successBox.style.display = "block";
+
+       
+        setTimeout(() => {
+          successBox.style.display = "none";
+          form.reset();
+          form.style.display = "block";
+          btn.style.display = "block";
+        }, 3000);
+
+      } else {
+        throw new Error("Erreur");
+      }
+
+    } catch (error) {
+      loading.innerText = "Erreur lors de l'envoi ";
+      btn.style.display = "block";
+    }
+  });
+
+});
