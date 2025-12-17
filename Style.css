@@ -52,8 +52,8 @@ nav .logo a:hover {
    color: var(--primary-color-dark);
 }
 
-nav .checkbox{
-   display: none;
+#check {
+  display: none;
 }
 
 nav .checkbox i {
