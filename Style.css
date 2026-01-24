@@ -52,13 +52,14 @@ nav .logo a:hover {
    color: var(--primary-color-dark);
 }
 
+#check {
 .checkbox{
    display: none;
 }
  #check {
   display: none;
 }
-
+}
 nav .checkbox i {
    font-size: 2rem;
    color: var(--primary-color);
@@ -102,6 +103,7 @@ ul li a:hover{
    justify-content: center;
    position: relative;
    animation: mymove 3s forwards;
+   gap: 10px;
 }
 
 .subtitle{
@@ -149,10 +151,10 @@ ul li a:hover{
 
 .hire__me  {
    background-color: var(--primary-color);
-   
+
 }
 .hire__me a  {
-   
+
    color: #FFFFFF;
 }
 
@@ -189,46 +191,7 @@ ul li a:hover{
   display: flex;
 }
 
-@media (width < 750px){
 
-   nav .checkbox{
-      display: block;
-   }
-
-   ul{
-      position: absolute;
-      width: 100%;
-      height: calc(100vh - 85px);
-      left: -100%;
-      top: 85px;
-      background-color: var(--extra-light);
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-   }
-
-   nav #check:checked ~ ul {
-      left: 0;
-   }
-
-   ul li a {
-      font-size: 1.25rem;
-   }
-
-   .section__container{
-      padding: 10rem 1rem 5rem 1rem;
-      text-align: center;
-      grid-template-columns: repeat(1, 1fr);
-   }
-
-   .image{
-      grid-area: 1/1/2/2;
-   }
-
-   .action_btns {
-      margin: auto;
-   }
-}
 .find-me {
   margin-top: 20px;
   display: flex;
@@ -342,16 +305,7 @@ ul li a:hover{
   color: var(--text-light);
   font-size: 0.95rem;
 }
-@media (max-width: 750px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 
-  .tags span {
-    margin-bottom: 8px;
-  }
-}
 .Contact {
   width: 100%;                 
   max-width: var(--max-width); 
@@ -396,7 +350,7 @@ ul li a:hover{
 }
 .contact-form{
   flex: 1;
- 
+
   width: 50%;
 }
 .contact-form input,
@@ -536,17 +490,7 @@ ul li a:hover{
 }
 
 
-@media (max-width: 750px) {
 
-  .projects-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-}
 html {
   scroll-behavior: smooth;
 }
@@ -554,7 +498,7 @@ html {
   display: flex;
   gap: 2%;
   width: 7%;
- 
+
   justify-content: space-between;
 }
 .language-switcher button {
@@ -580,12 +524,69 @@ html {
   color: white;
   border-color: var(--primary-color-dark);
 }
+@media (max-width: 768px) {
 
-@media (max-width: 750px) {
-  .language-switcher {
-    width: 30%; }
-   .language-switcher button {
-    font-size: 70%;
-    padding: 2% 0;
+  nav .checkbox {
+    display: block;
   }
-} 
+
+  ul {
+    position: absolute;
+    top: 85px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 85px);
+    background: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .section__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 8rem 1rem 3rem;
+    gap: 2rem;
+  }
+
+  .image {
+    margin: 0;
+  }
+
+  .image img {
+    width: 70%;
+    height: auto;
+  }
+
+  .action_btns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-lottie,
+  .language-switcher {
+    width: 100%;
+   
+  }
+
+  .find-me {
+    flex-direction: column;
+     justify-content: center;
+    margin: auto;
+  }
+}
