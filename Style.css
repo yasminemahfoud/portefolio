@@ -559,7 +559,7 @@ html {
   }
 
   .image img {
-    width: 70%;
+    width: 80%;
     height: auto;
   }
 
@@ -588,5 +588,9 @@ html {
     flex-direction: column;
      justify-content: center;
     margin: auto;
+  }
+  .contact-lottie lottie-player{
+    width: 360px;
+    height: 100%;
   }
 }
