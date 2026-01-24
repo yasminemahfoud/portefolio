@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("submitBtn");
   const loading = document.getElementById("loadingText");
   const successBox = document.getElementById("successBox");
+  const contactLottie = document.getElementById("contactLottie"); 
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -155,13 +156,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         loading.style.display = "none";
         form.style.display = "none";
-        successBox.style.display = "block";
+         contactLottie.style.display = "none";
+        successBox.style.display = "flex";
 
        
         setTimeout(() => {
           successBox.style.display = "none";
           form.reset();
           form.style.display = "block";
+          contactLottie.style.display = "block";
           btn.style.display = "block";
         }, 3000);
 
