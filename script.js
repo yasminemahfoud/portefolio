@@ -1,7 +1,7 @@
  //la partie de multilangue
  const translations = {
   fr: {
-    accueil: "Accueil",
+    accueil: "Yasmine Mahfoud",
     apropos: "À propos",
     projets: "Projets",
     contact: "Contact",
@@ -42,7 +42,7 @@
     sendBtn: "Envoyer"
   },
   en: {
-    accueil: "Home",
+    accueil: "Yasmine Mahfoud",
     apropos: "About",
     projets: "Projects",
     contact: "Contact",
@@ -129,6 +129,13 @@ function setLanguage(lang) {
   localStorage.setItem('lang',lang);
   updateTexts(lang);
 }
+//la partie de menu
+document.querySelectorAll("nav ul li a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("check").checked = false;
+  });
+});
+
 //la partie lotties
 document.addEventListener("DOMContentLoaded", () => {
 
