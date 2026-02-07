@@ -52,14 +52,14 @@ nav .logo a:hover {
    color: var(--primary-color-dark);
 }
 
-#check {
+
 .checkbox{
    display: none;
 }
  #check {
   display: none;
 }
-}
+
 nav .checkbox i {
    font-size: 2rem;
    color: var(--primary-color);
@@ -348,10 +348,9 @@ ul li a:hover{
    color: var(--primary-color);
    font-size: 1.2rem;
 }
-.contact-form{
+.contact-form,
+.contact-lottie{
   flex: 1;
-
-  width: 50%;
 }
 .contact-form input,
 .contact-form textarea{
@@ -386,16 +385,24 @@ ul li a:hover{
    background-color: var(--primary-color-dark);
 }
 .contact-lottie {
-  width: 48%; /* Lottie prend 48% de la largeur */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact-lottie lottie-player {
+  max-width: 380px;
   width: 100%; /* remplit la largeur de son container */
   height: auto; /* garde les proportions */
 }
+.success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 @keyframes mymove {
   from {left: -100px}
   to   {left: 0px;}
@@ -531,7 +538,8 @@ html {
   }
 
   ul {
-    position: absolute;
+    position: fixed;
+    inset: 0;
     top: 85px;
     left: -100%;
     width: 100%;
@@ -541,6 +549,7 @@ html {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    z-index: 102;
   }
 
   #check:checked ~ ul {
